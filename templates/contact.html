@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard360</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><b>PhishGuard360</b></div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('index') }}"><b>Home</b></a></li>
+      <li><a href="{{ url_for('products') }}"><b>Products</b></a></li>
+      <li><a href="{{ url_for('team') }}"><b>Team</b></a></li>
+      <li><a href="{{ url_for('contact') }}"><b>Contact Us</b></a></li>
+    </ul>
+  </nav>
+  <div class="into">
+    <b>APPLICATION FOR PHISHING DETECTION</b>
+  </div>
+  <div class="contact-container">
+      <div class="form-container">
+          <p class="context">We look forward to hearing from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+          <form action="{{ url_for('contact') }}" method="POST">
+              <label for="firstName">Name *</label>
+              <div class="name-field">
+                  <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                  <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+              </div>
+
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+
+              <div class="det">
+                  <button type="submit" class="tooltip" disabled>Let's Talk
+                      <p class="tooltiptext">Currently Unavailable. Stay Tuned</p>
+                  </button>
+              </div>
+          </form>
+      </div>
+
+      <div class="image-container">
+          <img src="image.jpg" alt="Decorative Image">
+      </div>
+  </div>
+  <!-- Footer Section -->
+  <footer>
+      <div class="footer-content">
+          <div class="company-info">
+              <div class="social-media">
+                  <a href="#" class="soc"><img src="icon-linkedin.png" alt="">LinkedIn</a>
+                  <a href="#" class="soc"><img src="icon-chat.png" alt="">Chat</a>
+              </div>
+          </div>
+
+          <div class="links">
+              <div class="security-tools">
+                  <h4>Security Tools</h4>
+                  <ul>
+                      <li><a href="#">Domain Monitoring</a></li>
+                      <li><a href="#">Phishing URL Scanner</a></li>
+                      <li><a href="#">Phishing Email Scanner</a></li>
+                  </ul>
+              </div>
+              <div class="resource">
+                  <h4>Resource</h4>
+                  <ul>
+                      <li><a href="#">API</a></li>
+                      <li><a href="#">Glossary</a></li>
+                  </ul>
+              </div>
+              <div class="company">
+                  <h4>Company</h4>
+                  <ul>
+                      <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <p class="footer-bottom">© 2024 PhishGuard360</p>
+  </footer>
+
+  <script src="static\script.js"></script>
+</body>
+</html>
