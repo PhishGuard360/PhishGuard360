@@ -11,8 +11,8 @@ def index():
 
         if url_content:
             # Define the endpoint and headers with Hugging Face credentials
-            hf_api_url = "$$https://cluz3abygwtyi7gj.us-east-1.aws.endpoints.huggingface.cloud"
-            headers = {"Authorization": "$$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"}
+            hf_api_url = "https://cluz3abygwtyi7gj.us-east-1.aws.endpoints.huggingface.cloud"
+            headers = {"Authorization": "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"}
             
             response = requests.post(hf_api_url, headers=headers, json={"inputs": url_content})
 
