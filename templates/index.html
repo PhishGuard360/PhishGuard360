@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard360</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><b>PhishGuard360</b></div>
+        <ul class="nav-links">
+            <li><a href="/"><b>Home</b></a></li>
+            <li><a href="/team"><b>Team</b></a></li>
+            <li><a href="/contact"><b>Contact Us</b></a></li>
+            <li><a href="/products"><b>Products</b></a></li>
+        </ul>
+    </nav>
+    <section class="form-section">
+        <form id="phishForm">
+            <label for="urlContent"><b><h1>URL Detection</h1></b></label>
+            <input type="url" id="urlContent" name="urlContent" placeholder="Enter URL here..." required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="result-section" id="resultSection" style="display: none;">
+        <h3>Prediction Results</h3>
+        <p>URL Prediction: <span id="urlPrediction"></span></p>
+        <p>Accuracy: <span id="accuracy"></span></p>
+    </section>
+
+    <script>
+        document.getElementById('phishForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const urlContent = document.getElementById('urlContent').value;
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ urlContent })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('urlPrediction').textContent = data["URL Prediction"];
+                    document.getElementById('accuracy').textContent = data["Accuracy"];
+                    document.getElementById('resultSection').style.display = 'block';
+                } else {
+                    document.getElementById('urlPrediction').textContent = "Error fetching prediction";
+                    document.getElementById('accuracy').textContent = "";
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('urlPrediction').textContent = "Request failed";
+                document.getElementById('accuracy').textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
