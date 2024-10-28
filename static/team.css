@@ -1,0 +1,146 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* NAVBAR STYLES */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: navy;
+}
+
+.logo {
+    font-size: 2em;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: silver;
+}
+
+/* INTRO SECTION */
+.into {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: navy;
+}
+
+/* SECTION HEADINGS */
+.head {
+    font-size: 1.8em;
+    color: navy;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MENTORS AND TEAMS */
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.mentors, .interns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.men {
+    text-align: center;
+    width: 180px;
+}
+
+.photo {
+    width: 150px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: navy;
+}
+
+.team-member-role {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-content a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contain {
+        padding: 20px;
+    }
+}

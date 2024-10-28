@@ -1,0 +1,208 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #004d99;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cccccc;
+}
+
+/* Intro Section */
+.into {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Contact Container Styling */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.form-container {
+    width: 50%;
+    height: 200%;
+}
+
+.form-container .context {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.det {
+    text-align: right;
+}
+
+.det .tooltip {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.det .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.det .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Image Container Styling */
+.image-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.footer-content .company-info,
+.footer-content .links {
+    width: 30%;
+}
+
+.footer-content .social-media a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-content .social-media a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.footer-content .links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-content .links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content .links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-content .links ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-content .links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
