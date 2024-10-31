@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard360</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .navbar {
+            width: 100%;
+            background-color: #ffdab9; /* Whitish-orange accent */
+            color: #333;
+            padding: 0.8em 0; /* Reduced padding */
+            text-align: center;
+            font-size: 1.5em; /* Smaller font size */
+            font-weight: bold;
+            box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation Box */
+        .nav-links-box {
+            width: 45%;
+            border-radius: 0 0 5px 5px;
+            background-color: #ffe6cfa7;
+            padding: 1em 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2em;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #ff7f50; /* Whitish-orange accent for links */
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #ffdab9;
+            color: #333;
+        }
+
+        /* Team Section */
+        .contain {
+            background-color: #ffffff;
+            padding: 2em;
+            margin: 1em;
+            width: 85%;
+            max-width: 800px; /* Adjusted max width */
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .head {
+            color: #333;
+            margin-bottom: 1em;
+            font-size: 1.5em; /* Slightly larger font for headings */
+        }
+
+        .mentors, .interns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em; /* Space between team members */
+        }
+
+        .men {
+            background-color: #f9f9f9; /* Light grey background for team member cards */
+            border-radius: 10px;
+            padding: 1em;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 150px; /* Fixed width for team member cards */
+        }
+
+        .photo {
+    width: 100px; /* Set a standard width */
+    height: 100px; /* Set a standard height */
+    object-fit: cover; /* This will crop the image if necessary while keeping the aspect ratio */
+    border-radius: 10%; /* Circular photos */
+    margin-bottom: 0.5em;
+}
+
+        .team-member-name {
+            font-weight: bold;
+        }
+
+        .team-member-role {
+            font-size: 0.9em; /* Slightly smaller font for roles */
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto; /* Push footer to bottom */
+            background-color: #ffdab9;
+            padding: 1em 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .company-info {
+            margin-bottom: 1em;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 1em;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        .links div {
+            text-align: left;
+        }
+
+        .footer-bottom {
+            margin-top: 1em;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="navbar">
+        PhishGuard360
+    </nav>
+
+    <!-- Navigation Links Box -->
+    <div class="nav-links-box">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/products">Products</a></li>
+        </ul>
+    </div>
+
+    <!-- Team Section -->
+    <div class="contain">
+        <h2 class="head">Research Mentors</h2>
+        <div class="mentors">
+            <div class="men">
+                <img src="static/avatar1.jpg" alt="Dr. Rajasekaran" class="photo">
+                <div>
+                    <p class="team-member-name">Dr. Rajasekaran Subramanian</p>
+                    <p class="team-member-role">Program Manager</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/avatar2.jpg" alt="T. Sai Kumar" class="photo">
+                <div>
+                    <p class="team-member-name">T. Sai Kumar</p>
+                    <p class="team-member-role">Principal Mentor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contain">
+        <h2 class="head">Research Team</h2>
+        <div class="interns">
+            <div class="men">
+                <img src="static/aashish.jpg" alt="B Aashish Reddy" class="photo">
+                <div>
+                    <p class="team-member-name">B Aashish Reddy</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/kaustubh.jpg" alt="J L Kaustubh" class="photo">
+                <div>
+                    <p class="team-member-name">J L Kaustubh</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/deekshith.jpg" alt="A Deekshith Reddy" class="photo">
+                <div>
+                    <p class="team-member-name">A Deekshith Reddy</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/gayatri.jpg" alt="V Lakshmi Gayatri" class="photo">
+                <div>
+                    <p class="team-member-name">V Lakshmi Gayatri</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/chinmayee.jpg" alt="M Chinmayee Yasaswini" class="photo">
+                <div>
+                    <p class="team-member-name">M Chinmayee Yasaswini</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/nishitha.jpg" alt="CH Nishitha Reddy" class="photo">
+                <div>
+                    <p class="team-member-name">CH. Nishitha Reddy</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/shanmukhi.jpg" alt="Shanmukhi Shikaram" class="photo">
+                <div>
+                    <p class="team-member-name">Shanmukhi Sikaram</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/deekshitha.jpg" alt="T Deekshita Reddy" class="photo">
+                <div>
+                    <p class="team-member-name">T. Deekshita Reddy</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/keerthana.jpg" alt="Keerthana" class="photo">
+                <div>
+                    <p class="team-member-name">Keerthana</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+            <div class="men">
+                <img src="static/vanshika.jpg" alt="Vanshika Thota" class="photo">
+                <div>
+                    <p class="team-member-name">Vanshika Thota</p>
+                    <p class="team-member-role">Research Intern</p>
+                </div>
+            </div>
+        </div></div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 PhishGuard360. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
+    

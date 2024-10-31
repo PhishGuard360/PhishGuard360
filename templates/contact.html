@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard360</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center children */
+      justify-content: flex-start; /* Align from the top */
+      min-height: 100vh; /* Full height */
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #ffdab9;
+      color: #333;
+      padding: 0.8em 0;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links-box {
+      width: 45%;
+      border-radius: 0 0 5px 5px;
+      background-color: #ffe6cfa7;
+      padding: 1em 0;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: #ff7f50;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #ffdab9;
+      color: #333;
+    }
+
+    .contact-container {
+      background-color: #ffffff;
+      padding: 2em; /* Adjust padding */
+      margin: 2em auto; /* Center horizontally */
+      text-align: center; /* Center text */
+      width: 600%;
+      max-width: 500px; /* Max width */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); /* Shadow */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 1em;
+      margin: 0.5em 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1em;
+      box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-container button {
+      background-color: #ff7f50;
+      color: #ffffff;
+      padding: 0.8em 2em;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-container button:hover {
+      background-color: #d46c43;
+    }
+
+    footer {
+      background-color: #ffdab9;
+      width: 100%;
+      padding: 1em 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .footer-bottom {
+      font-size: 0.9em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">PhishGuard360</nav>
+  <div class="nav-links-box">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/products">Products</a></li>
+    </ul>
+  </div>
+  <section class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We look forward to hearing from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+    <form action="/contact.html" method="POST">
+      <label for="firstName">Name</label>
+      <div class="name-field">
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      </div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+      <button type="submit" disabled>Let's Talk</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 PhishGuard360. All Rights Reserved.</p>
+  </footer>
+  <script src="static/script.js"></script>
+</body>
+</html>
